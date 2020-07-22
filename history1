@@ -1,0 +1,203 @@
+1  mkdir my-workspace
+    2  cd my-workspace
+    3  nano deployment.yaml   # 파일 생성
+    4  ls -al
+    5  cat deployment.yaml
+    6  pip install httpie
+    7  sudo pip install httpie
+    8  watch ls
+    9  :
+   10  exit
+   11  ls -al
+   12  cd .aws
+   13  ls
+   14  cat config
+   15  cat credentials
+   16  cd .
+   17  cd ..
+   18  aws --version
+   19  clear
+   20  kubectl create deploy my-nginx --image=crazyhawk/my-ngingx:v1
+   21  kubectl get all
+   22  kubectl expose deployment.apps/my-nginx --type=LoadBalancer --port=80
+   23  kubectl get all
+   24  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   25  kubectl get all
+   26  kubectl delete service/my-nginx
+   27  kubectl get all
+   28  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   29  kubectl delete deployment.apps/my-nginx
+   30  kubectl get all
+   31  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   32  kubectl get all
+   33  kubectl expose deployment.apps/my-nginx --type=LoadBalancer --port=80
+   34  kubectl get all
+   35  kubectl get pods
+   36  kubectl get all
+   37  cd Dockerfile
+   38  ls
+   39  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1 .
+   40  docker images
+   41  aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 271153858532.dkr.ecr.us-east-2.amazonaws.com/
+   42  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   43  kubectl delete deploy.service --all
+   44  kubectl get all
+   45  kubectl delete deploy.service --all
+   46  kubectl delete deploy,service -all
+   47  kubectl delete deploy,service --all
+   48  kubectl get all
+   49  kubectl build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1 .
+   50  kubectl create deploy my-nginx -image=271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   51  kubectl create deploy my-nginx --image=271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   52  kubectl get all
+   53  kubectl expose deploy my-nginx --type=LoadBalancer --ort=80
+   54  kubectl expose deploy my-nginx --type=LoadBalancer --port=80
+   55  kubectl get all
+   56  echo $JAVA_HOME
+   57  java -version
+   58  kubectl get all
+   59  kubectl get pod
+   60  kubectl get deploy
+   61  kubectl get service
+   62  kubectl get all
+   63  kubectl get pod my-nginx-5968d55fc6-4rtlc
+   64  kubectl get pod/my-nginx-5968d55fc6-4rtlc
+   65  kubectl delete pod/my-nginx-5968d55fc6-4rtlc
+   66  cd /
+   67  cd ..
+   68  cd ~
+   69  cd ..
+   70  clear
+   71  pwd
+   72  ls -al
+   73  cd skcadmin
+   74  cd skccadmin
+   75  pwd
+   76  git clone https://github.com/event-storming/container-orchestration.git
+   77  ls
+   78  cd container-orchestration/
+   79  ls -al
+   80  kubectl create deploy my-nginx2 --image=apexacme/my-nginx:v1
+   81  kubectl expose deploy my-nginx2 --type=LoadBalancer --port=80
+   82  kubectl get pod
+   83  kubectl get service
+   84  kubectl get nodes
+   85  kubetl get node
+   86  kubectl get node
+   87  kubectl get po
+   88  kubectl get po -o wide
+   89  kubectl deploy
+   90  kubectl get deploy
+   91  kubectl get deploy -o wide
+   92  kubectl get replica
+   93  kubectl get replicaset
+   94  clear
+   95  kubectl get all
+   96  kubectl describe pod/my-nginx-5968d55fc6-sc22n
+   97  kubectl create deployment my-nginx3 --image=test/my-ngingx:v999
+   98  kubectl get all
+   99  kubectl describe pod/my-nginx3-68c7977457-t2jmm
+  100  kubectl logs pod/my-nginx3-68c7977457-t2jmm
+  101  kubectl logs pod/my-nginx-5968d55fc6-sc22n
+  102  clear
+  103  kubectl get pod
+  104  kubectl describe my-nginx-5968d55fc6-sc22n
+  105  kubectl describe pod my-nginx-5968d55fc6-sc22n
+  106  kubectl logs pod my-nginx-5968d55fc6-sc22n
+  107  kubectl logs my-nginx-5968d55fc6-sc22n
+  108  kubectl exec -it my-nginx-5968d55fc6-sc22n
+  109  kubectl exec -it my-nginx-5968d55fc6-sc22n --/bin/baash
+  110  kubectl exec -it my-nginx-5968d55fc6-sc22n -- /bin/baash
+  111  kubectl exec -it my-nginx-5968d55fc6-sc22n -- /bin/bash
+  112  pwd
+  113  cd ...
+  114  cd ..
+  115  pwd
+  116  cd ..
+  117  ls al
+  118  ls -al
+  119  cd ~
+  120  pwd
+  121  ls -al
+  122  nano declarative-pod.yaml
+  123  ls -al
+  124  kubectl -f declarative-pod.yaml
+  125  kubectl create -f declarative-pod.yaml
+  126  kubectl get pod
+  127  kubectl exec -it declarative-pod -- /bin/bash
+  128  kubectl get all
+  129  kubectl delete pod/declarative-pod
+  130  kubectl get all
+  131  top
+  132  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
+  133  kubectl get node
+  134  kubectl top node
+  135  kubectl top po
+  136  kubectl get nodes --show-labels
+  137  kubectl get nodes --show-labels | grep ssd
+  138  ls -al
+  139  cd container-orchestration/
+  140  ls -al
+  141  cd yaml_aws/
+  142  ls
+  143  ls al
+  144  ls -al
+  145  cd pod
+  146  ls -al
+  147  kubectl create -f pod-with-nodeselector.yaml
+  148  cat pod-with-nodeselector.yaml
+  149  kubectl get po
+  150  kubectl get po -o wide
+  151  kubectl get node
+  152  kubectl label nodes ip-192-168-16-72.us-east-2.compute.internal disktype=ssd
+  153  kubectl get node --show-labels | grep ssd
+  154  kubectl get svc
+  155  ls -al
+  156  cat pod-with-nodeselector.yaml
+  157  kubectl get pod -l env=test
+  158  kubectl get pod -l env!=test
+  159  kubectl get pod -l 'env in (test)'
+  160  kubectl get pod -l 'env in (test, test99)'
+  161  kubectl get pod -selector 'env in (test, test99)'
+  162  kubectl get pod --selector 'env in (test, test99)'
+  163  kubectl get depolyment
+  164  kubectl get deploy
+  165  kubectl delete deploy my-nginx3
+  166  kubectl delete deploy my-nginx2
+  167  kubectl get all
+  168  kubectl delete service
+  169  kubectl delete service service/my-nginx2
+  170  kubectl delete service/my-nginx2
+  171  kubectl get all
+  172  kubectl delete pod/nginx
+  173  kubectl get all
+  174  kubectl scale deloy my-nginx --replicas=5
+  175  kubectl scale deploy my-nginx --replicas=5
+  176  kubectl get all
+  177  kubectl scale deploy my-nginx --replicas=3
+  178  kubectl get all
+  179  cd ..
+  180  pwd
+  181  kubectl delete deploy,service,pod --all
+  182  kubectl get hpa
+  183  kubectl get 1234
+  184  kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+  185  kubectl get all
+  186  kubectl autoscale deployment php-apache --cpu-percent=20 --min=1 --max=10
+  187  kubectl get hpa php-apache -o yaml
+  188  cat siege.yaml
+  189  kubectl create -f siege.yaml
+  190  kubectl exec -it siege -- /bin/bash
+  191  kubect get all
+  192  kubectl get all
+  193  kubectl get namespace
+  194  kubectl create ns hanjin
+  195  kubectl get ns
+  196  kubectl create deploy my-nginx --image nginx -n hanjin
+  197  kubectl get all
+  198  kubectl get all -n default
+  199  kubectl get all -n hanjin
+  200  kubectl delete ns hanjin
+  201  kubectl get ns
+  202  kubectl get all
+  203  history
