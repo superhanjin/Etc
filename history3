@@ -1,0 +1,664 @@
+1  mkdir my-workspace
+    2  cd my-workspace
+    3  nano deployment.yaml   # 파일 생성
+    4  ls -al
+    5  cat deployment.yaml
+    6  pip install httpie
+    7  sudo pip install httpie
+    8  watch ls
+    9  :
+   10  exit
+   11  ls -al
+   12  cd .aws
+   13  ls
+   14  cat config
+   15  cat credentials
+   16  cd .
+   17  cd ..
+   18  aws --version
+   19  clear
+   20  kubectl create deploy my-nginx --image=crazyhawk/my-ngingx:v1
+   21  kubectl get all
+   22  kubectl expose deployment.apps/my-nginx --type=LoadBalancer --port=80
+   23  kubectl get all
+   24  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   25  kubectl get all
+   26  kubectl delete service/my-nginx
+   27  kubectl get all
+   28  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   29  kubectl delete deployment.apps/my-nginx
+   30  kubectl get all
+   31  kubectl create deploy my-nginx --image=crazyhawk/my-nginx:v1
+   32  kubectl get all
+   33  kubectl expose deployment.apps/my-nginx --type=LoadBalancer --port=80
+   34  kubectl get all
+   35  kubectl get pods
+   36  kubectl get all
+   37  cd Dockerfile
+   38  ls
+   39  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1 .
+   40  docker images
+   41  aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 271153858532.dkr.ecr.us-east-2.amazonaws.com/
+   42  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   43  kubectl delete deploy.service --all
+   44  kubectl get all
+   45  kubectl delete deploy.service --all
+   46  kubectl delete deploy,service -all
+   47  kubectl delete deploy,service --all
+   48  kubectl get all
+   49  kubectl build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1 .
+   50  kubectl create deploy my-nginx -image=271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   51  kubectl create deploy my-nginx --image=271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-my-nginx:v1
+   52  kubectl get all
+   53  kubectl expose deploy my-nginx --type=LoadBalancer --ort=80
+   54  kubectl expose deploy my-nginx --type=LoadBalancer --port=80
+   55  kubectl get all
+   56  echo $JAVA_HOME
+   57  java -version
+   58  kubectl get all
+   59  kubectl get pod
+   60  kubectl get deploy
+   61  kubectl get service
+   62  kubectl get all
+   63  kubectl get pod my-nginx-5968d55fc6-4rtlc
+   64  kubectl get pod/my-nginx-5968d55fc6-4rtlc
+   65  kubectl delete pod/my-nginx-5968d55fc6-4rtlc
+   66  cd /
+   67  cd ..
+   68  cd ~
+   69  cd ..
+   70  clear
+   71  pwd
+   72  ls -al
+   73  cd skcadmin
+   74  cd skccadmin
+   75  pwd
+   76  git clone https://github.com/event-storming/container-orchestration.git
+   77  ls
+   78  cd container-orchestration/
+   79  ls -al
+   80  kubectl create deploy my-nginx2 --image=apexacme/my-nginx:v1
+   81  kubectl expose deploy my-nginx2 --type=LoadBalancer --port=80
+   82  kubectl get pod
+   83  kubectl get service
+   84  kubectl get nodes
+   85  kubetl get node
+   86  kubectl get node
+   87  kubectl get po
+   88  kubectl get po -o wide
+   89  kubectl deploy
+   90  kubectl get deploy
+   91  kubectl get deploy -o wide
+   92  kubectl get replica
+   93  kubectl get replicaset
+   94  clear
+   95  kubectl get all
+   96  kubectl describe pod/my-nginx-5968d55fc6-sc22n
+   97  kubectl create deployment my-nginx3 --image=test/my-ngingx:v999
+   98  kubectl get all
+   99  kubectl describe pod/my-nginx3-68c7977457-t2jmm
+  100  kubectl logs pod/my-nginx3-68c7977457-t2jmm
+  101  kubectl logs pod/my-nginx-5968d55fc6-sc22n
+  102  clear
+  103  kubectl get pod
+  104  kubectl describe my-nginx-5968d55fc6-sc22n
+  105  kubectl describe pod my-nginx-5968d55fc6-sc22n
+  106  kubectl logs pod my-nginx-5968d55fc6-sc22n
+  107  kubectl logs my-nginx-5968d55fc6-sc22n
+  108  kubectl exec -it my-nginx-5968d55fc6-sc22n
+  109  kubectl exec -it my-nginx-5968d55fc6-sc22n --/bin/baash
+  110  kubectl exec -it my-nginx-5968d55fc6-sc22n -- /bin/baash
+  111  kubectl exec -it my-nginx-5968d55fc6-sc22n -- /bin/bash
+  112  pwd
+  113  cd ...
+  114  cd ..
+  115  pwd
+  116  cd ..
+  117  ls al
+  118  ls -al
+  119  cd ~
+  120  pwd
+  121  ls -al
+  122  nano declarative-pod.yaml
+  123  ls -al
+  124  kubectl -f declarative-pod.yaml
+  125  kubectl create -f declarative-pod.yaml
+  126  kubectl get pod
+  127  kubectl exec -it declarative-pod -- /bin/bash
+  128  kubectl get all
+  129  kubectl delete pod/declarative-pod
+  130  kubectl get all
+  131  top
+  132  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
+  133  kubectl get node
+  134  kubectl top node
+  135  kubectl top po
+  136  kubectl get nodes --show-labels
+  137  kubectl get nodes --show-labels | grep ssd
+  138  ls -al
+  139  cd container-orchestration/
+  140  ls -al
+  141  cd yaml_aws/
+  142  ls
+  143  ls al
+  144  ls -al
+  145  cd pod
+  146  ls -al
+  147  kubectl create -f pod-with-nodeselector.yaml
+  148  cat pod-with-nodeselector.yaml
+  149  kubectl get po
+  150  kubectl get po -o wide
+  151  kubectl get node
+  152  kubectl label nodes ip-192-168-16-72.us-east-2.compute.internal disktype=ssd
+  153  kubectl get node --show-labels | grep ssd
+  154  kubectl get svc
+  155  ls -al
+  156  cat pod-with-nodeselector.yaml
+  157  kubectl get pod -l env=test
+  158  kubectl get pod -l env!=test
+  159  kubectl get pod -l 'env in (test)'
+  160  kubectl get pod -l 'env in (test, test99)'
+  161  kubectl get pod -selector 'env in (test, test99)'
+  162  kubectl get pod --selector 'env in (test, test99)'
+  163  kubectl get depolyment
+  164  kubectl get deploy
+  165  kubectl delete deploy my-nginx3
+  166  kubectl delete deploy my-nginx2
+  167  kubectl get all
+  168  kubectl delete service
+  169  kubectl delete service service/my-nginx2
+  170  kubectl delete service/my-nginx2
+  171  kubectl get all
+  172  kubectl delete pod/nginx
+  173  kubectl get all
+  174  kubectl scale deloy my-nginx --replicas=5
+  175  kubectl scale deploy my-nginx --replicas=5
+  176  kubectl get all
+  177  kubectl scale deploy my-nginx --replicas=3
+  178  kubectl get all
+  179  cd ..
+  180  pwd
+  181  kubectl delete deploy,service,pod --all
+  182  kubectl get hpa
+  183  kubectl get 1234
+  184  kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+  185  kubectl get all
+  186  kubectl autoscale deployment php-apache --cpu-percent=20 --min=1 --max=10
+  187  kubectl get hpa php-apache -o yaml
+  188  cat siege.yaml
+  189  kubectl create -f siege.yaml
+  190  kubectl exec -it siege -- /bin/bash
+  191  kubect get all
+  192  kubectl get all
+  193  kubectl get namespace
+  194  kubectl create ns hanjin
+  195  kubectl get ns
+  196  kubectl create deploy my-nginx --image nginx -n hanjin
+  197  kubectl get all
+  198  kubectl get all -n default
+  199  kubectl get all -n hanjin
+  200  kubectl delete ns hanjin
+  201  kubectl get ns
+  202  kubectl get all
+  203  history
+  204  ls -al
+  205  cd volumn
+  206  vd volume
+  207  cd volume/
+  208  ls -al
+  209  cat volume-emptydir.yaml
+  210  kubectl apply -f volume-emptydir.yaml
+  211  kubectl get all
+  212  kubectl exec -it pod/shared-volumes --container redis -- /bin/bash
+  213  kubectl exec -it pod/shared-volumes --container nginx -- /bin/bash
+  214  kubectl get pod
+  215  kubectl get containers
+  216  kubectl describe shared-volumes
+  217  kubectl describe pod shared-volumes
+  218  kubectl get storageclass
+  219  cd ..
+  220  cd configmap
+  221  ls -al
+  222  kubectl get configmap
+  223  kubectl get cm
+  224  kubectl create configmap hello-cm --from-literal-language-java
+  225  kubectl create configmap hello-cm --from-literal-language=java
+  226  kubectl create configmap hello-cm --from-literal=language=java
+  227  kubectl get cm
+  228  kubectl get cm -o yaml
+  229  ls -al
+  230  cat server.js
+  231  cat Dockerfile
+  232  cat cm-deployment.yaml
+  233  nano cm-deployment.yaml
+  234  cat cm-deployment.yaml
+  235  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/cm-sandbox:v1 .
+  236  docker images
+  237  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1
+  238  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1 .
+  239  docker images
+  240  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1
+  241  aws configure
+  242  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1
+  243  aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 271153858532.dkr.ecr.us-east-2.amazonaws.com/
+  244  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1
+  245  docker images
+  246  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/hello-cm:v1
+  247  kubectl create -f cm-deployment.yaml
+  248  kubectl create -f cm-service.yaml
+  249  kubectl get serivce
+  250  kubectl get all
+  251  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  252  docker container rm $(docker ps -a -q)
+  253  docker image rm -f $(docker images -q)
+  254  kubectl get all
+  255  docker container rm $(docker ps -a -q)
+  256  kubectl container stop
+  257  kubectl stop container
+  258  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1 .
+  259  docker images
+  260  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  261  kubectl create -f cm-deployment.yaml
+  262  echo test | base64
+  263  echo dGVzdAo= | base64 --decode
+  264  cd ..
+  265  ls -al
+  266  cd secret
+  267  ls -al
+  268  cd ..
+  269  cd liveness
+  270  ls
+  271  cat exec-liveness.yaml
+  272  ls -a
+  273  ls -al
+  274  cat exec-liveness.yaml
+  275  kubectl create -f exec-liveness.yaml
+  276  kubectl get all
+  277  kubectl delete deploy,service --all
+  278  kubectl get all
+  279  kubectl delete hpa horizontalpodautoscaler.autoscaling/php-apache
+  280  kubectl delete horizontalpodautoscaler.autoscaling/php-apache
+  281  kubectl get pod
+  282  kubectl delete pod/siege
+  283  kubectl delte pod/shared-volumes
+  284  kubectl delete pod/liveness-exec
+  285  kubectl get pod
+  286  kubectl delete pod -all
+  287  kubectl delete pod --all
+  288  kubectl get all
+  289  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1 .
+  290  cd ..
+  291  ls -al
+  292  cd configma
+  293  cd configmap/
+  294  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1 .
+  295  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  296  kubectl create -f cm-deployment.yaml
+  297  kubectl get deploy
+  298  kubectl create -f cm-service.yaml
+  299  kubectl get svc
+  300  kubectl get all
+  301  ls -al
+  302  cat server.js
+  303  docker images
+  304  docker ps
+  305  docker image rm 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm
+  306  docker images
+  307  docker image rm node
+  308  docker images
+  309  docker s
+  310  docker ps
+  311  docker images
+  312  docker image rm node
+  313  docker image rm 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm
+  314  docker image rm node:carbon
+  315  docker images
+  316  docker image rm 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  317  docker images
+  318  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1 .
+  319  docker images
+  320  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  321  aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 271153858532.dkr.ecr.us-east-2.amazonaws.com/
+  322  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-hello-cm:v1
+  323  ls -al
+  324  cat cm-deployment.yaml
+  325  cat cm-service.yaml
+  326  kubectl get all
+  327  kubectl delete deploy,service --all
+  328  kubect get all
+  329  cd ~
+  330  kubectl get all
+  331  kubectl get node
+  332  kubectl delete deploy,service,node --all
+  333  kubectl get node
+  334  kubectl get nodes
+  335  kubectl delete deploy,service,pod --all
+  336  kubectl delete deploy,service,pod,pvc --all
+  337  kubectl get nodes
+  338  kubectl get all
+  339  kubectl get nodes
+  340  kubectl get all
+  341  kubectl get node
+  342  curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+  343  kubectl --namespace kube-system create sa tiller
+  344  kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+  345  helm init --service-account tiller
+  346  helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+  347  helm repo update
+  348  kubectl create namespace ingress-basic
+  349  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  350  kubectl --namespace kube-system create sa tiller
+  351  kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+  352  helm init --service-account tiller
+  353  helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+  354  helm repo update
+  355  kubectl create namespace ingress-basic
+  356  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  357  kubectl get node
+  358  history
+  359  kubectl get node
+  360  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basichelm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  361  kubectl create namespace ingress-basic
+  362  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  363  kubectl get all --namespace=ingress-basic
+  364  kubectl get node
+  365  kubectl get all --namespace=ingress-basic
+  366  ls -al
+  367  cd container-orchestration/
+  368  cd yaml_aws/
+  369  cd ingress
+  370  cd blue-svc/
+  371  ls -al
+  372  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-blue:latest  .
+  373  aws ecr create-repository --repository-name admin10-nginx-blue --region us-east-2
+  374  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-blue:latest
+  375  ls -al
+  376  cat nginx-blue-deployment.yaml
+  377  nano nginx-blue-deployment.yaml
+  378  kubectl create -f nginx-blue-deployment.yaml
+  379  cd ..
+  380  ls -al
+  381  cd green-svc/
+  382  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-green:latest  .
+  383  aws ecr create-repository --repository-name admin10-nginx-green --region us-east-2
+  384  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-green:latest
+  385  nano nginx-green-deployment.yaml
+  386  kubectl create -f nginx-green-deployment.yaml
+  387  kubectl get deploy,service -n ingress-basic
+  388  cd ..
+  389  kubectl create -f web-ingress.yaml
+  390  kubectl get ingress -n ingress-basic
+  391  cat web-ingress.yaml
+  392  cd blue-svc/
+  393  ls
+  394  cat nginx-blue-deployment.yaml
+  395  kubectl get all
+  396  kubectl get deploy,service -n ingress-basic
+  397  kubectl delete deploy,service -n ingress-basic
+  398  kubectl get all
+  399  kubectl get deploy,service -n ingress-basic
+  400  kubectl delete -n ingress-basic deployment.extensions/nginx-blue-deployment
+  401  kubectl get deploy,service -n ingress-basic
+  402  kubectl delete -n ingress-basic deployment.extensions/nginx-green-deployment
+  403  kubectl delete -n ingress-basic deploy,service --all
+  404  kubectl get deploy,service -n ingress-basic
+  405  ls -a
+  406  ls -al
+  407  nano nginx-blue-deployment.yaml
+  408  cd ..
+  409  cd green-svc/
+  410  ls -al
+  411  nano nginx-green-deployment.yaml
+  412  cd ..
+  413  cd blue-svc/
+  414  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-blue:latest  .
+  415  aws ecr create-repository --repository-name admin10-nginx-blue --region us-east-2
+  416  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-blue:latest
+  417  cd //
+  418  cd ~/container-orchestration/yaml_aws/ingress/
+  419  cd green-svc/
+  420  docker build -t 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-green:latest  .
+  421  docker push 271153858532.dkr.ecr.us-east-2.amazonaws.com/admin10-nginx-green:latest
+  422  cd ..
+  423  cd blue-svc/
+  424  kubectl create -f nginx-blue-deployment.yaml
+  425  cd ..,
+  426  cd ..
+  427  cd green-svc/
+  428  kubectl create -f nginx-green-deployment.yaml
+  429  kubectl get deploy,service -n ingress-basic
+  430  cd //
+  431  cd ~/container-orchestration/yaml_aws/ingress
+  432  ls
+  433  kubectl create -f web-ingress.yaml
+  434  kubectl get ingress -n ingress-basic
+  435  kubectl get deploy,service -n ingress-basic
+  436  kubectl create -f web-ingress.yaml
+  437  kubectl get all -n ingress_basic
+  438  kubectl get all -n ingress-basic
+  439  ls -al
+  440  cat web-ingress.yaml
+  441  kubectl get ingress -n ingress-basic
+  442  kubectl get all -n ingress_basic
+  443  helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+  444  helm repo update
+  445  kubectl create namespace ingress-basic
+  446  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  447  kubectl get all --namespace=ingress-basic
+  448  helm del --purge nginx-ingress
+  449  kubectl create namespace ingress-basic
+  450  helm install --name nginx-ingress stable/nginx-ingress --namespace=ingress-basic
+  451  kubectl get all --namespace=ingress-basic
+  452  kubectl get ingress -n ingress-basic
+  453  kubectl get all --namespace=ingress-basic
+  454  kubectl get all
+  455  kubectl delete ns ingress-basic
+  456  kubectl get all --all-namespaces
+  457  cd ..
+  458  ls -al
+  459  cd ..
+  460  ls
+  461  ls -al
+  462  cd ..
+  463  ls -al
+  464  curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.4.5 sh -
+  465  cd istio-1.4.5
+  466  export PATH=$PWD/bin:$PATH
+  467  for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
+  468  kubectl apply -f install/kubernetes/istio-demo.yaml
+  469  kubectl get pod -n istio-system
+  470  cd ~
+  471  mkdir git
+  472  cd git
+  473  git clone https://github.com/redhat-developer-demos/istio-tutorial
+  474  cd istio-tutorial
+  475  kubectl create namespace tutorial
+  476  kubectl apply -f <(istioctl kube-inject -f customer/kubernetes/Deployment.yml) -n tutorial
+  477  kubectl create -f customer/kubernetes/Service.yml -n tutorial
+  478  cat customer/kubernetes/Gateway.yml
+  479  kubectl create -f customer/kubernetes/Gateway.yml -n tutorial
+  480  kubectl get service/istio-ingressgateway -n istio-system
+  481  kubectl get all -n istio-basic
+  482  kubectl get all -n istio-system
+  483  kubectl apply -f <(istioctl kube-inject -f preference/kubernetes/Deployment.yml)  -n tutorial
+  484  kubectl create -f preference/kubernetes/Service.yml -n tutorial
+  485  kubectl apply -f <(istioctl kube-inject -f recommendation/kubernetes/Deployment.yml) -n tutorial
+  486  kubectl create -f recommendation/kubernetes/Service.yml -n tutorial
+  487  kubectl edit svc jaeger-query -n istio-system
+  488  kubectl edit svc kiali -n istio-system
+  489  kubectl get svc -n istio-system
+  490  kubectl apply -f <(istioctl kube-inject -f recommendation/kubernetes/Deployment-v2.yml) -n tutorial
+  491  kubectl scale --replicas=2 deployment/recommendation-v2 -n tutorial
+  492  kubectl create -f istiofiles/destination-rule-recommendation-v1-v2.yml -n tutorial
+  493  kubectl create -f istiofiles/virtual-service-recommendation-v2.yml -n tutorial
+  494  kubectl get VirtualService -n tutorial -o yaml
+  495  kubectl apply -f istiofiles/virtual-service-recommendation-v1_and_v2.yml -n tutorial
+  496  kubectl create namespace istio-cb-ns
+  497  kubectl label namespace istio-cb-ns istio-injection=enabled
+  498  kubectl apply -f - <<EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpbin
+  namespace: istio-cb-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpbin
+  template:
+    metadata:
+      labels:
+        app: httpbin
+    spec:
+      containers:
+      - name: httpbin
+        image: docker.io/honester/httpbin:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpbin
+  namespace: istio-cb-ns
+  labels:
+    app: httpbin
+spec:
+  selector:
+    app: httpbin
+  ports:
+  - name: http
+    port: 8000
+    targetPort: 80
+EOF
+
+  499  kubectl get all -n istio-cb-ns
+  500  kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: siege
+  namespace: istio-cb-ns
+spec:
+  containers:
+  - name: siege
+    image: apexacme/siege-nginx
+EOF
+
+  501  kubectl get all -n istio-cb-ns
+  502  kubectl exec -it siege --container siege -n istio-cb-ns -- /bin/bash
+  503  kubectl apply -f - <<EOF
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: dr-httpbin
+  namespace: istio-cb-ns
+
+spec:
+  host: httpbin
+  trafficPolicy:
+    connectionPool:
+      http:
+        http1MaxPendingRequests: 1
+        maxRequestsPerConnection: 1
+EOF
+
+  504  kubectl exec -it siege --container siege -n istio-cb-ns -- /bin/bash
+  505  kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-server-1
+  namespace: istio-cb-ns
+  labels:
+    app: hello
+spec:
+  containers:
+  - name: hello-server-1
+    image: docker.io/honester/hello-server:latest
+    imagePullPolicy: IfNotPresent
+    env:
+    - name: VERSION
+      value: "v1"
+    - name: LOG
+      value: "1"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-server-2
+  namespace: istio-cb-ns
+  labels:
+    app: hello
+spec:
+  containers:
+  - name: hello-server-2
+    image: docker.io/honester/hello-server:latest
+    imagePullPolicy: IfNotPresent
+    env:
+    - name: VERSION
+      value: "v2"
+    - name: LOG
+      value: "1"
+    - name: RANDOM_ERROR
+      value: "0.2"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-hello
+  namespace: istio-cb-ns
+  labels:
+    app: hello
+spec:
+  selector:
+    app: hello
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8080
+EOF
+
+  506  kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpbin
+  namespace: istio-cb-ns
+  labels:
+    app: httpbin
+spec:
+  containers:
+  - name: httpbin
+    image: docker.io/honester/httpbin:latest
+    imagePullPolicy: IfNotPresent
+EOF
+
+  507  kubectl logs -f hello-server-2 -c hello-server-2 -n istio-cb-ns
+  508  kubectl apply -f - <<EOF
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: dr-hello
+  namespace: istio-cb-ns
+spec:
+  host: svc-hello
+  trafficPolicy:
+    outlierDetection:
+      interval: 1s
+      consecutiveErrors: 1
+      baseEjectionTime: 3m
+      maxEjectionPercent: 100
+EOF
+
+  509  kubectl get dr
+  510  kubectl get dr -n istio-cb-ns
+  511  kubectl logs -f hello-server-2 -c hello-server-2 -n istio-cb-ns
+  512  kubectl get ns
+  513  kubectl delete ns istio-cb-ns tutorial
+  514  kubectl get ns
+  515  kubectl delete ns istio-system
+  516  kubectl get ns
+  517  history
